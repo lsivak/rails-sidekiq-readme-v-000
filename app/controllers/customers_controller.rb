@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   end
 
   def upload
-     LeadsWorker.perform_async(params[:leads_file].path)
+     LeadsWorker.perform_async(params[:leads].file)
      redirect_to customers_path
    end
  end
